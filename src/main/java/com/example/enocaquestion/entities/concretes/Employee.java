@@ -24,22 +24,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Employee {
 	
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "employee_id")
+    @Column(name = "employee_id")
     private Long employeeId;
 
-	@Column(name = "fullname")
+    @Column(name = "fullname")
     private String fullname;
 
-	@Column(name = "email")
+    @Column(name = "email")
     private String email;
 
-	@Column(name = "position")
+    @Column(name = "position")
     private String position;
 
-	@CreationTimestamp
-	@Column(name = "creation_date")
+    @CreationTimestamp
+    @Column(name = "creation_date")
     private LocalDate creationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
